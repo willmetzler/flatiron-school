@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-
-<head>
- <meta lang="en" />
- <!-- Remember to `defer` your JavaScript, so that it runs only after your DOM loads! -->
- <script defer src="./index.js"></script> 
-</head>
-
 <!-- 
   -> With having both an HTML and JS file, you need a bridge
   -> an "API" is basically a communication bridge
@@ -22,29 +14,32 @@
   -> D - Delete
 -->
 
-<!--
-The <body> element represents the content of your webpage.
-In terms of the DOM tree, the body is the root **parent** of everything on your site.
-What we write inside it here is the **static** content of our site.
-We'll use JavaScript (and sometimes CSS) to specify things that happen
-      **after** load, the **dynamic** content of our site.
--->
+<!DOCTYPE html>
+
+<head>
+ <meta lang="en" />
+ <!-- Remember to `defer` your JavaScript, so that it runs only after your DOM loads! -->
+ <script defer src="./index.js"></script>
+</head>
+
 <body>
-  <!-- In this example, I want the user to see the page's title and author **on load**, -->
-  <!--    which is why it belongs here and not in `index.js`. -->
   <h1>DOM Manipulation</h1>
-  <!-- The <address> element is used to denote a document's contact information. -->
-  <!-- In this example, <address> is a child of <body>, and <strong> is a child of <address>. -->
-  <!-- Said another way, <address> is the parent of <strong>, and <body> is the parent of <address>. -->
-  <!-- If you want some practice understanding these relationships, try drawing out this page's DOM tree! -->
-  <address>by <strong>Sakib Rasul</strong></address>
+  <!-- class
+    -> ways to identify elements in your HTML, outside of your HTML - class and ID are the two ways
+    -> class is more general, for related elements
+    -> example: classifying 5 button elements as "button", so you could select all of the buttons in the CSS file or something like that
+  -->
+
+  <address class="address">by <strong>Sakib Rasul</strong></address>
+  <!-- id 
+   -> for ONE specific element 
+   -> no two elements should have the same ID
+   -> an element can have more than one class but only one ID
+  -->
+
   <div id="dates">
-    <!-- You can use an element's `id` attribute to uniquely identify it outside of `index.html`. -->
-    <p id="today">Today!</p>
-    <!-- By definition, an `id` must be unique. -->
+    <p id="today">Today.</p>
     <p id="tomorrow">Tomorrow.</p>
-    <!-- In other words, an `id` is a unique identifier! -->
     <p id="forever">Forever?</p>
-    <p id="sometime"></p>
   </div>
 </body>
