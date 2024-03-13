@@ -2,15 +2,51 @@
   -> definition
   -> comments
   -> elements, tags, attributes, content, children
+
+    -> text --- p, h1
+      -> difference between h1, h2, h3 is the prominence of the headings
+    -> image --- img
+    -> video --- video
+
+    <p> text goes here </p>
+
+    -> attributes are specific traits that describe how a tag/element works
+    <img src="https://website.com/image.png">
+
   -> void elements (e.g. img)
+  -> void elements do not have content to display within two tag brackets, they self close like img
 -->
 
 <!-- ~ preamble -->
+<!-- first thing you want to do when starting an HTML file is start with the preamble-->
+<!DOCTYPE html>
 
 <!-- ~ head
      -> meta, title, script
--->
+     -> "collection of metadata, anything about the website that is needed to know to run"
+     -> ex: language of site, fonts to be downloaded, title of site, some CSS info, etc
+     -> <script> tag loads our JavaScript file
+     -> the "defer" tag says to defer to HTML file over JS in case that doesn't load or something
+    -->
+<head> 
+  <meta lang="en"> 
+  <title>HTML 101</title> <!-- *What would show up on tab* -->
+  <script defer src="./index.js"></script>
+</head>
 
 <!-- ~ body -->
+<!-- all of the content on our page, text/video/images etc. 
+  -> the js adds interactivity into the body 
+  -> p stands for paragraph
+  -> h1 stands for header 1 - most prominent header
+-->
+<body> 
+  <h1>HTML 101!!!</h1> 
+  <h2>By Will Metzler</h2>
+  <p>This is a primer on HTML!</p>
+</body>
 
 <!-- ~ live server -->
+
+<!-- HTML= structure/content, JavaScript= function/interactivity, CSS= styling/aesthetic -->
+<!-- note notation for HTML seen around this line -->
