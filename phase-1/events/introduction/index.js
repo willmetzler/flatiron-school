@@ -24,6 +24,19 @@ document.querySelector("#today").addEventListener("click", event => {
 //second parameter is what you want to happen, or callback function
 
 // ~ the "submit" event
+document.querySelector("form").addEventListener("submit", event => {
+    event.preventDefault();
+    console.log("The form was submitted");
+    console.log(document.querySelector("form").date)
+    const submittedDate = document.querySelector("form").date.value
+    console.log(submittedDate);
+})
+//submit happens on the form, not the input
 
 // ~ challenges
 // 1. Add some non-click, non-submit event listener to the page. It can trigger whatever you wish!
+
+
+document.querySelector("#tomorrow").addEventListener("mouseover", event => {
+    console.log("I am a mouseover message!");
+})
